@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\sapab\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\sapab\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="D:\Repositories\FileSecuritySystem" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Security" t="Include">
+            <e p="Decipher.cs" t="Include" />
+            <e p="Usage" t="Include">
+              <e p="DecoderTest.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

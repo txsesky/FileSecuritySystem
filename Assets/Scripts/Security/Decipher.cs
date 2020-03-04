@@ -1,8 +1,10 @@
 ﻿using System;
+using System.ComponentModel;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using OpenSSL.Crypto;
+using UnityEngine;
 
 namespace Security
 {
@@ -44,12 +46,12 @@ namespace Security
                 {
                     byte[] derived = Pbkdf2Sha256GetBytes(32, pwd, salt, 1000);
                     key = derived;
-                    for (int i = 0; i < 8; i++)
+                    for (int i = 0; i < 16; i++)
                     {
                         iv[i] = derived[i];
                     }
                 }
-
+               
                 byte[] output = cc.Decrypt(msg, key, iv);
                 return output;
             }
@@ -109,7 +111,7 @@ namespace Security
             }
         }
 
-        public static bool ByteArrayToFile(string fileName, byte[] byteArray)
+        public static bool ByteArrayToFile(string fileName, in byte[] byteArray)
         {
             try
             {
@@ -123,7 +125,7 @@ namespace Security
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception caught in process: {0}", ex);
+                Debug.Log("Exception caught in process: " + ex);
                 return false;
             }
         }
